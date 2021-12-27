@@ -29,6 +29,7 @@ export default function Calculator() {
 
 	const handleOperation = button => {
 		const buttonContent = button.target.innerText
+		if (currentNumber === '-') return
 		if (
 			buttonContent === '-' &&
 			!isNegative &&
