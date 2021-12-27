@@ -15,7 +15,7 @@ body {
 .calculator {
 	position: absolute;
 	left: calc(50% - 20rem);
-	top: calc(50% - 40vh);
+	top: 5%;
 	width: 40rem;
 	background-color: hsl(0 0% 0% / 0.2);
 	border-radius: 1rem;
