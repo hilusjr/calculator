@@ -19,6 +19,7 @@ export default function Calculator() {
 	}
 
 	const deleteLast = () => {
+		if (currentNumber[currentNumber.length - 1] === '.') setPointUsed(false)
 		if (currentNumber.length === 1) {
 			setCurrentNumber('0')
 			return
@@ -30,6 +31,9 @@ export default function Calculator() {
 	const handleOperation = button => {
 		const buttonContent = button.target.innerText
 		if (currentNumber === '-') return
+		if (currentNumber[currentNumber.length - 1] === '.') {
+			currentNumber = currentNumber.slice(0, -1)
+		}
 		if (
 			buttonContent === '-' &&
 			!isNegative &&
@@ -97,6 +101,7 @@ export default function Calculator() {
 		setPreviousNumberSet(false)
 		setNegative(false)
 		setCalculated(true)
+		setPointUsed(false)
 	}
 
 	return (

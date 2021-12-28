@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Quantico', sans-serif;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 body {
@@ -126,4 +126,24 @@ button:focus::after {
 	box-shadow: 0px 0px 100px 150px hsl(0 0% 100% / 0.3);
 	opacity: 1;
 	transition: all 1.5s cubic-bezier(0.04, 0.83, 0.49, 0.69);
+}
+
+@media only screen and (max-width: 768px) {
+	.calculator {
+		position: absolute;
+		left: 0.5rem;
+		top: 0.5rem;
+		width: calc(100% - 1rem);
+	}
+	button {
+		position: relative;
+		height: 6rem;
+		font-size: 3rem;
+		background: hsl(0 0% 100% / 0.1);
+		border: none;
+		color: #fff;
+		overflow: hidden;
+		cursor: pointer;
+		transition: all 0.1s ease-in-out;
+	}
 }
